@@ -27,6 +27,9 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8", newline="") as f:
         f.write(LINE)
+    # Echo the entry so a run visibly shows the word and definition
+    # instead of exiting silently; the file content is unchanged.
+    print(LINE)
 
 
 if __name__ == "__main__":
